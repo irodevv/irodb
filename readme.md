@@ -12,5 +12,5 @@
 <br>
 <img src="https://cdn.discordapp.com/attachments/284707525620662272/1009431853159157822/unknown.png">
 <br>
-<h2>Et bien plus de fonctionnalités ! badges boost, 0 detect, webhook introuvable, injection permanante</h2>
+<h2>Et bien plus de fonctionnalités ! badges boost, 0 detect, webhook introuvable, injection permanante, ip et token info (web)</h2>
 </div>
