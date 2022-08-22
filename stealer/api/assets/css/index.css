@@ -1,0 +1,85 @@
+body {
+    background-color: #3c4359;
+    background: linear-gradient(140deg, #3c4359, #000);
+    background-size: 400% 400%;
+
+    -webkit-animation: background 18s ease infinite;
+    -moz-animation: background 18s ease infinite;
+    animation: background 18s ease infinite;
+}
+
+@-webkit-keyframes background {
+    0% {
+        background-position: 5% 0%
+    }
+
+    50% {
+        background-position: 96% 10 0%
+    }
+
+    100% {
+        background-position: 5% 0%
+    }
+}
+
+@-moz-keyframes background {
+    0% {
+        background-position: 5% 0%
+    }
+
+    50% {
+        background-position: 96% 100%
+    }
+
+    100% {
+        background-position: 5% 0%
+    }
+}
+
+@keyframes background {
+    0% {
+        background-position: 5% 0%
+    }
+
+    50% {
+        background-position: 96% 100%
+    }
+
+    100% {
+        background-position: 5% 0%
+    }
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#text {
+    padding: 0.8rem;
+    border-radius: 15px;
+    background-color: #3c4359;
+    color: black;
+    transition: transform .3s;
+}
+
+#text:hover {
+    transform: scale(1.05);
+}
+
+#info {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}

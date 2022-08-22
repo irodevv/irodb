@@ -1,0 +1,39 @@
+.browser {
+    margin: 1rem;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #3c4359;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cookies {
+    padding: 0.8rem;
+    border-radius: 15px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #3c4359;
+    color: white;
+}
+
+#parse-btn {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #3c4359;
+    color: white;
+    border: none;
+    transition: transform .3s;
+}
+
+#parse-btn:hover {
+    transform: scale(1.1);
+}

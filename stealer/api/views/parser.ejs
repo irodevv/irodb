@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Parser</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/parser.css">
+</head>
+
+<body>
+	<div class="content">
+		<div class="browser" onclick="download('')">Cliquez ici pour télécharger le txt</div>
+	</div>
+
+	<script>
+		let cookies = { "": "<%= content %>" };
+		function download(browser) {
+			let element = document.createElement('a');
+			element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cookies[browser]));
+			element.setAttribute('download', `${browser}.txt`);
+			element.style.display = 'none';
+			document.body.appendChild(element);
+			element.click();
+			document.body.removeChild(element);
+		};
+	</script>
+</body>
+
+</html>
