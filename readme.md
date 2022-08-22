@@ -1,7 +1,7 @@
 <div align="center">
   <h1>⚠ À BUTE ÉDUCATIVE ⚠</h1><BR>
    <h3>LLX404 STEALER</h3>
- <p>PS: Je hoster mon api sur heroku, donc le serveur faisait que redémarrer avec les fichiers de base donc la db Sqlite redevenez vierge donc je ne pouvais pas faire de bot ou de site pour build, si j'avais eu un vps avec un ndd dessus j'aurais fait cela facilement :)</p>
+ <p>PS: Je hoster mon api sur heroku, le serveur fessait que redémarrer avec les fichiers de base donc la db Sqlite redevenez vierge, je ne pouvais pas faire de bot ou de site pour build, si j'avais eu un vps avec un ndd j'aurais fait cela facilement :)</p>
   <br>
   <p>Example:</p>
   <img src="https://cdn.discordapp.com/attachments/284707525620662272/1009432281548587069/unknown.png" height="50%"><br><br><br>
