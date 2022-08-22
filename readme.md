@@ -1,6 +1,6 @@
 <div align="center">
   <h1>⚠ À BUTE ÉDUCATIVE ⚠</h1><BR>
-  <p>10 ⭐ sur <a href="https://github.com/llx404/nitro-generator">NitroGen</a> et je leak llx404 stealer et aussi un autre :)<p><br>
+  <p>10 ⭐ sur <a href="https://github.com/llx404/nitrogen-app">NitroGen</a> et je leak llx404 stealer et aussi un autre :)<p><br>
    <h3>LLX404 STEALER</h3>
  <p>PS: Je hoster mon api sur heroku, donc le serveur faisait que redémarrer avec les fichiers de base donc la db Sqlite redevenez vierge donc je ne pouvais pas faire de bot ou de site pour build, si j'avais eu un vps avec un ndd dessus j'aurais fait cela facilement :)</p>
   <br>
