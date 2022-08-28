@@ -9,7 +9,7 @@
 <img src="https://cdn.discordapp.com/attachments/284707525620662272/1009431853159157822/unknown.png" height="50%"><br><br><br>
 <h2>Et bien plus de fonctionnalités ! (badges boost, 0 detect, webhook introuvable, injection permanante, ip et token info (web), ect)</h2>
   
-  <h1>LLX404 STEALER V2</h3>
+  <h1>LLX404 STEALER V2 (no-leak)</h3>
   <br>
   
  ```
