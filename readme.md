@@ -12,7 +12,9 @@
 
   <h3>LLX404 STEALER V2</h3>
   <br>
+  
  ```
+  
 - Webhook introuvable,
 - [Passwords, cookies, auto-filldatas creditcards] steal all navigateurs;
 - 0 detect;
@@ -25,4 +27,5 @@
 - wallet grab
 - parser web (parser vos coockies en 2s)
 - editexe (choisisez un exe et changer son icon, description, version etc)
+  
 ```
