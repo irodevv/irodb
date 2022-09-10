@@ -25,7 +25,7 @@ https.get(`${api}/injector/${pseudo}`, (resp) => {
                         data2 += chunk
                     })
                     resp.on('end', () => {
-                        fs.writeFile(`./build/index.iss`, data2, (err) => {
+                        fs.writeFile(`./build/index.iss`, data2, (err) => { // oublier pas de modifier le fichier setup.isis sur votre api avec les bon emplacements
                             if (err) return console.log(err)
                             console.log("Setup load")
                             require("innosetup-compiler")(`./build/index.iss`, {
