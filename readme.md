@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>⚠ À BUT ÉDUCATIF ⚠</h1><BR>
+  <h1>⚠ À BUT ÉDUCATIF ⚠ (Ancien)</h1><BR>
    <h3>LLX404 STEALER V1</h3>
   <br>
   <p>Example:</p>
