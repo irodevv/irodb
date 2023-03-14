@@ -1,7 +1,7 @@
 <div align="center">
   <h1>⚠ À BUT ÉDUCATIF ⚠ (PAS FINIS)</h1><BR>
 
-     <h2>STEALER V2</h2>
+     <h3>STEALER V2</h3>
 
   <span>Je n'est pas pue finir ce project tout simplement car j'ai un problème avec win-dpapi</span>
   
