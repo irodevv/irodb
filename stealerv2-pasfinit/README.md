@@ -3,7 +3,7 @@
 
      <h2>STEALER V2</h2>
 
-  <p>Je n'est pas pue finir ce project tout simplement car j'ai un problème avec win-dpapi</p>
+  <span>Je n'est pas pue finir ce project tout simplement car j'ai un problème avec win-dpapi</span>
   
     <br>
   <h3>Prochainement</h3>
