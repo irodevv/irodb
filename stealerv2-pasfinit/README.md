@@ -6,6 +6,7 @@
   <span>Je n'est pas pue finir ce project tout simplement car j'ai un problème avec win-dpapi</span>
   
     <br>
+  
   <h3>Prochainement</h3>
   <ul>
     <li>Add audio in stream</li>
@@ -21,6 +22,7 @@
         <img src="https://cdn.discordapp.com/attachments/933484640092684328/1085195673957310465/image.png"/>
                 <img src="https://cdn.discordapp.com/attachments/933484640092684328/1085196093492572170/image.png"/>
   </p>
+  
     <br>
   
    <h3>Stream</h3>
@@ -28,13 +30,16 @@
     <img src="https://cdn.discordapp.com/attachments/933484640092684328/1085197247593074688/image.png"/>
      
   </p>
+  
     <br>
   
     <h3>Connexion (terminal online)</h3>
+  
   <p>
     <img src="https://cdn.discordapp.com/attachments/933484640092684328/1085197878311538750/image.png"/>
      
   </p>
+  
     <br>
   
    <h3>REZ</h3>
@@ -42,6 +47,7 @@
     <img src="https://cdn.discordapp.com/attachments/933484640092684328/1085197515290325032/image.png"/>
      
   </p>
+  
     <br>
 
 
